@@ -1,0 +1,11 @@
+class Problem_504_Base7 {
+        //Language JavaScript
+        //Runtime 0ms
+        //Memory 53.6MB
+/**
+ * @param {number} num
+ * @return {string}
+ */
+var convertToBase7 = function(num) {
+    return num.toString(7);
+};
