@@ -1,0 +1,13 @@
+Problem_709_To_Lower_Case
+//Language JavaScript
+       //Runtime 0ms
+       //Memory 53.7MB
+
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var toLowerCase = function(s) {
+    s = s.toLowerCase();
+    return s;
+};
