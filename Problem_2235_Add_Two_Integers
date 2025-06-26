@@ -1,0 +1,13 @@
+class Problem_2235_Add_Two_Integers {A
+      //Language JavaScript
+      //Runtime 1ms
+      //Memory 10.37MB
+ 
+/**
+ * @param {number} num1
+ * @param {number} num2
+ * @return {number}
+ */
+var sum = function(num1, num2) {
+    return num1 + num2;
+};
