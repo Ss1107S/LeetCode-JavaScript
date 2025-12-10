@@ -1,0 +1,29 @@
+Problem_2535_Difference_Between_Element_Sum_and_Digit_Sum_of_an_Array
+      //Language JavaScript
+      //Runtime 4ms
+      //Memory 60.57MB
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var differenceOfSum = function(nums) {
+    let sumEl = 0;
+    let sumDig = 0;
+
+    for (num of nums) {
+        sumEl += num;
+        sumDig += digitSum(num)
+    }
+    return sumEl - sumDig;
+
+    function digitSum(num) {
+        let sum = 0;
+
+        while (num >= 1) {
+            sum += Math.floor(num % 10);
+            num = num / 10;
+        }
+        return sum;
+    }
+};
+ 
