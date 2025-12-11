@@ -1,0 +1,23 @@
+Problem_3754_Concatenate_Non-Zero_Digits_and_Multiply_by_Sum_I
+      //Language JavaScript
+      //Runtime 1ms
+      //Memory 71.09MB
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var sumAndMultiply = function(n) {
+    let x = 0;
+    let sum = 0;
+    let y = String(n);
+
+    for (let i = 0; i < y.length; i++) {
+        if (y [i] !== '0') {
+            let n = Number(y[i]);
+            x = x * 10 + n;
+            sum += n;
+        }
+    }
+
+    return x * sum;
+};
