@@ -1,0 +1,32 @@
+Problem_884_Uncommon_Words_from_Two_Sentences
+      //Language JavaScript
+      //Runtime 0ms
+      //Memory 55.16MB
+/**
+ * @param {string} s1
+ * @param {string} s2
+ * @return {string[]}
+ */
+var uncommonFromSentences = function(s1, s2) {
+    s1 = s1.split(' ');
+    s2 = s2.split(' ');
+    let setMap = new Map();
+    
+    for(let i = 0; i < s1.length; i++) {
+        setMap.set(s1[i], (setMap.get(s1[i]) || 0) + 1);
+    }
+
+    for(let i = 0; i < s2.length; i++) {
+        setMap.set(s2[i], (setMap.get(s2[i]) || 0) + 1);
+    }
+
+    let result = [];
+
+    for(let [key, value] of setMap) {
+        if(value === 1) {
+            result.push(key);
+        }
+    }
+
+    return result;
+};
