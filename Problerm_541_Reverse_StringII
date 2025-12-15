@@ -1,0 +1,26 @@
+Problerm_541_Reverse_StringII
+      //Language JavaScript
+      //Runtime 4ms
+      //Memory 57.42MB
+ /**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+var reverseStr = function(s, k) {
+     let words = s.split('');
+    let size = words.length;
+
+    for (let i = 0; i < size; i += 2 * k) {
+        let left = i;
+        let right = Math.min(i + k - 1, size - 1);
+
+        while (left < right) {
+            let letter = words[left];
+            words[left++] = words[right];
+            words[right--] = letter;
+        }
+    }
+
+    return words.join('');
+};
