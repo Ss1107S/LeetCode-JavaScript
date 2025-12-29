@@ -1,0 +1,19 @@
+Problem_35_Search_Insert_Position
+      //Language JavaScript
+      //Runtime 1ms
+      //Memory 53.80MB
+ /**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(nums, target) {
+          let x=0;
+        for (i= 0; i<nums.length; i++){
+            if(nums[i]==target)
+            return i;
+            else if (nums[i]<target)
+            x=x+1;
+        }
+        return x;
+};
