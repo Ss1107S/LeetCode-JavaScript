@@ -1,0 +1,12 @@
+Problem_28_Find_the_Index_of_the_First_Occurrence_in_a_String
+      //Language JavaScript
+      //Runtime 0ms
+      //Memory 54.71MB
+/**
+ * @param {string} haystack
+ * @param {string} needle
+ * @return {number}
+ */
+var strStr = function(haystack, needle) {
+    return haystack.indexOf(needle);
+};
