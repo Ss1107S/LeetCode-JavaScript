@@ -1,0 +1,34 @@
+Problem_ 13_Roman_to_Integer
+      //Language JavaScript
+      //Runtime 8ms
+      //Memory 62.32MB
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var romanToInt = function(s) {
+  const map = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+
+    let sum = 0;
+
+    s = s.replace(/IV/g, "IIII");
+    s = s.replace(/IX/g, "VIIII");
+    s = s.replace(/XL/g, "XXXX");
+    s = s.replace(/XC/g, "LXXXX");
+    s = s.replace(/CD/g, "CCCC");
+    s = s.replace(/CM/g, "DCCCC");
+
+    for (let i = 0; i < s.length; i++) {
+        sum += map[s[i]];
+    }
+
+    return sum;
+};
