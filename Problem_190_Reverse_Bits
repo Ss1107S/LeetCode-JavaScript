@@ -1,0 +1,22 @@
+Problem_190_Reverse_Bits
+      //Language JavaScript
+      //Runtime 46ms
+      //Memory 53.95MB
+/**
+ * @param {number} n - a positive integer
+ * @return {number} - a positive integer
+ */
+var reverseBits = function(n) {
+let result = 0;
+
+    for (let i = 0; i < 32; i++) {
+        result = result * 2 + (n % 2); 
+        n = Math.floor(n / 2);         
+    }
+
+    if (result < 0) {
+        result += Math.pow(2, 32);
+    }
+
+    return result;
+};
