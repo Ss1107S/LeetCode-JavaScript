@@ -1,0 +1,24 @@
+Problem_202_Happy_Number
+      //Language JavaScript
+      //Runtime 0ms
+      //Memory 54.3MB
+/**
+ * @param {number} n
+ * @return {boolean}
+ */
+var isHappy = function(n) {
+    let sum=0;
+        
+    while (n >= 7){
+        while (n > 0){
+            let n1 = n % 10;
+            sum = sum + (n1 * n1);
+            n = Math.floor(n / 10);
+        }
+        n = sum;
+        sum = 0;
+    }
+    if (n == 1)
+    return true;
+    return false;
+};
