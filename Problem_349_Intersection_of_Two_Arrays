@@ -1,0 +1,32 @@
+Problem_349_Intersection_of_Two_Arrays
+//Language JavaScript
+      //Runtime 2ms
+      //Memory 42.04MB
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersection = function(nums1, nums2) {
+     const num3 = new Array(1001).fill(0);
+    for (const i of nums1) {
+        num3[i] = 1;
+    }
+    let count = 0;
+    for (const i of nums2) {
+        if (num3[i] === 1) {
+            count++;
+            num3[i] = 2;
+        }
+    }
+    const arr = new Array(count);
+    let j = 0;
+    for (const i of nums2) {
+        if (num3[i] === 2) {
+            num3[i] = 1;
+            arr[j] = i;
+            j++;
+        }
+    }
+    return arr;
+};
