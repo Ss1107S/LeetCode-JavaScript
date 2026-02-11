@@ -1,0 +1,14 @@
+Problem_367_Valid_Perfect_Square
+//Language JavaScript
+      //Runtime 0ms
+      //Memory 55.22MB
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
+var isPerfectSquare = function(num) {
+    let n = Math.sqrt(num);
+    let x = Math.floor(n);
+    if (x * x === num) return true;
+    return false;
+};
