@@ -1,0 +1,15 @@
+Problem_434_Number_of_Segments_in_a_String
+//Language JavaScript
+      //Runtime 0ms
+      //Memory 53.91MB
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var countSegments = function(s) {
+    let trimmed = s.trim();
+        if (trimmed === "") {
+        return 0;
+    }
+    return trimmed.split(/\s+/).length;
+};
