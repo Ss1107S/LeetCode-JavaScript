@@ -1,0 +1,30 @@
+Problem_389_Find_the_Difference
+      //Language JavaScript
+      //Runtime 4ms
+      //Memory 55.94MB
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {character}
+ */
+var findTheDifference = function(s, t) {
+    const charCount = {};
+
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i];
+        if (charCount[char]) {
+            charCount[char]++;
+        } else {
+            charCount[char] = 1;
+        }
+    }
+
+    for (let i = 0; i < t.length; i++) {
+        const char = t[i];
+        if (!charCount[char]) {
+            return char;
+        }
+
+        charCount[char]--;
+    }
+}
