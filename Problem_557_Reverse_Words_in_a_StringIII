@@ -1,0 +1,17 @@
+Problem_557_Reverse_Words_in_a_StringIII
+      //Language JavaScript
+      //Runtime 11ms
+      //Memory 61.18MB
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+   let words = s.split(/\s+/);
+    let reversed = [];
+    for (let word of words) {
+        let reversedWord = word.split('').reverse().join('');
+        reversed.push(reversedWord);
+    }
+    return reversed.join(' ');
+};
