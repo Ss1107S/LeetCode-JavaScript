@@ -1,0 +1,28 @@
+Problem_541_Reverse_String_II
+      //Language JavaScript
+      //Runtime 5ms
+      //Memory 56.18MB
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+var reverseStr = function(s, k) {
+ let words = s.split('');
+    let size = words.length;
+
+    for (let i = 0; i < size; i += 2 * k) {
+        let left = i;
+        let right = Math.min(i + k - 1, size - 1);
+
+        while (left < right) {
+            let temp = words[left];
+            words[left] = words[right];
+            words[right] = temp;
+            left++;
+            right--;
+        }
+    }
+
+    return words.join('');
+};
