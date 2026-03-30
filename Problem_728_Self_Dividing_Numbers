@@ -1,0 +1,38 @@
+Problem_728_Self_Dividing_Numbers
+//Language JavaScript
+      //Runtime 8ms
+      //Memory 62.32MB
+/**
+ * @param {number} left
+ * @param {number} right
+ * @return {number[]}
+ */
+var selfDividingNumbers = function(left, right) {
+ let list = [];
+
+    for (let i = left; i <= right; i++) {
+        if (isDividing(i)) {
+            list.push(i);
+        }
+    }
+
+    return list;
+};
+
+function isDividing(n) {
+    if (n <= 0) return false;
+
+    let original = n;
+
+    while (n !== 0) {
+        let digit = n % 10;
+
+        if (digit === 0 || original % digit !== 0) {
+            return false;
+        }
+
+        n = Math.floor(n / 10);
+    }
+
+    return true;
+}
