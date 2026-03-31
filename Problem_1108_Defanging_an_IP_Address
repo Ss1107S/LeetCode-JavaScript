@@ -1,0 +1,11 @@
+Problem_1108_Defanging_an_IP_Address
+      //Language JavaScript
+      //Runtime 44ms
+      //Memory 53.88MB
+/**
+ * @param {string} address
+ * @return {string}
+ */
+var defangIPaddr = function(address) {
+    return address.replace(/\./g, "[.]");
+};
