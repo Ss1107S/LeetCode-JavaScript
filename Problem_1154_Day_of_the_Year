@@ -1,0 +1,31 @@
+Problem_1154_Day_of_the_Year
+      //Language JavaScript
+      //Runtime 7ms
+      //Memory 65.08MB
+/**
+ * @param {string} date
+ * @return {number}
+ */
+const numbersOfDays = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30];
+
+for (let i = 1; i < numbersOfDays.length; i++) {
+    numbersOfDays[i] += numbersOfDays[i - 1];
+}
+
+function isLeapYear(year) {
+    return (year % 4 === 0) && (year % 100 !== 0 || year % 400 === 0);
+}
+
+function dayOfYear(date) {
+    const [yearStr, monthStr, dayStr] = date.split("-");
+    
+    const year = parseInt(yearStr);
+    const month = parseInt(monthStr) - 1;
+    const day = parseInt(dayStr);
+
+    if (isLeapYear(year) && month > 1) {
+        return numbersOfDays[month] + day + 1;
+    }
+
+    return numbersOfDays[month] + day;
+}
