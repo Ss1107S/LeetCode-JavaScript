@@ -1,0 +1,23 @@
+Problem_1221_Split_a_String_in_Balanced_Strings
+      //Language JavaScript
+      //Runtime 0ms
+      //Memory 55.35MB
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var balancedStringSplit = function(s) {
+    let x=0;
+    let counter=0;
+    for (let i=0; i<s.length; i++){
+        if(s.charAt(i)==='L'){
+        x++;
+    }else{
+        x--;
+        }
+        if(x===0){
+            counter++;
+        }
+    }
+    return counter;
+};
