@@ -1,0 +1,19 @@
+Problem_1281_Subtract_the_Product_and_Sum_of_Digits_of_an_Integer
+      //Language JavaScript
+      //Runtime 0ms
+      //Memory 54.66MB
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var subtractProductAndSum = function(n) {
+    let sum = 0
+    let i = 1;
+        while (n > 0){
+            let x = n % 10;
+            sum = sum + x;
+             i = i * x;
+            n = Math.floor(n / 10);
+        }
+        return i - sum;
+};
