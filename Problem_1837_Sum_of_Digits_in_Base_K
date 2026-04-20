@@ -1,0 +1,18 @@
+Problem_1837_Sum_of_Digits_in_Base_K
+//Language JavaScript
+      //Runtime 0ms
+      //Memory 54.01MB
+/**
+ * @param {number} n
+ * @param {number} k
+ * @return {number}
+ */
+var sumBase = function(n, k) {
+    let sumBase=0;
+        
+        while(n >= 1){
+            sumBase += n % k;
+            n = Math.floor(n / k);;
+        }
+        return sumBase;
+};
