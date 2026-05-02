@@ -1,0 +1,14 @@
+Problem_1342_Number_of_Steps_to_Reduce_a_Number_to_Zero
+//Language JavaScript
+      //Runtime 0ms
+      //Memory 53.26MB
+/**
+ * @param {number} num
+ * @return {number}
+ */
+var numberOfSteps = function(num) {
+     if (num == 0)
+        return num;
+
+        return 1 + (num % 2 == 0 ? numberOfSteps(num / 2) : numberOfSteps(num - 1));
+};
