@@ -1,0 +1,12 @@
+Problem_1662_Check_If_Two_String_Arrays_are_Equivalent
+//Language JavaScript
+      //Runtime 39ms
+      //Memory 54.03MB
+/**
+ * @param {string[]} word1
+ * @param {string[]} word2
+ * @return {boolean}
+ */
+var arrayStringsAreEqual = function(word1, word2) {
+    return word1.join("") === word2.join("");  
+};
