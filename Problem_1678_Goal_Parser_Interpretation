@@ -1,0 +1,13 @@
+Problem_1678_Goal_Parser_Interpretation
+      //Language JavaScript
+      //Runtime 34ms
+      //Memory 53.18MB
+/**
+ * @param {string} command
+ * @return {string}
+ */
+var interpret = function(command) {
+    return command
+    .replaceAll("()", "o")
+    .replaceAll("(al)", "al");
+};
