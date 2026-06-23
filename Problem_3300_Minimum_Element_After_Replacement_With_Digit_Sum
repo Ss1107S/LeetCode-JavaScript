@@ -1,0 +1,23 @@
+Problem_3300_Minimum_Element_After_Replacement_With_Digit_Sum
+      //Language JavaScript
+      //Runtime 1ms
+      //Memory 57.5MB
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var minElement = function(nums) {
+      let min = Infinity;
+
+    for (const num of nums) {
+        let sum = 0;
+
+        for (const digit of String(num)) {
+            sum += Number(digit);
+        }
+
+        min = Math.min(min, sum);
+    }
+
+    return min;
+};
