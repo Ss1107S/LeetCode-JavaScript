@@ -1,0 +1,19 @@
+Problem_1903_Largest_Odd_Number_in_String
+      //Language JavaScript
+      //Runtime 0ms
+      //Memory 59.4MB
+/**
+ * @param {string} num
+ * @return {string}
+ */
+var largestOddNumber = function(num) {
+    for (let index = num.length - 1; index >= 0; index--) {
+        const digit = Number(num[index]);
+
+        if (digit % 2 !== 0) {
+            return num.slice(0, index + 1);
+        }
+    }
+
+    return "";
+}
